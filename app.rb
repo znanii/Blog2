@@ -4,6 +4,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
+set :database, {adapter: "sqlite3", database: "blog.db"}
+
+class Post < ActiveRecord::Base
+end
 
 get '/' do
 	erb "It's a blog"			
