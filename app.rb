@@ -37,3 +37,14 @@ get '/posts' do
 	@posts = Post.order('created_at DESC')
 	erb :posts
 end
+
+get '/details/:id' do
+	@post = Post.find(params[:id])
+	@comments = Comment.all
+	erb :details
+end
+
+post '/details/:id' do
+	@c = Comment.new params[:comment]
+	@c.save
+end

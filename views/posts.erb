@@ -2,5 +2,9 @@
 <% @posts.each do |post|%>
 	<br><%= post.content %>
 	<br>
-Added by <%= post.author%><br><br>
+	<span style="color:gray">
+Added by <%= post.author%>
+<br> <%= post.created_at %>
+<br><br>		</span>
+<a href="/details/<%= post.id%>">Comments</a>
 <%end%>

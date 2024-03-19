@@ -1,0 +1,13 @@
+<h2>Details</h2>
+<h4><%= @post.content %><h4>
+Author: <%= @post.author %>
+
+<% @comments.each do |t| %>
+<%= t.content %> <br><br>
+<%end%>
+
+<form action="/details/:id" method="POST" role="form">
+  	   <textarea name="comment[content]" class="form-control" rows="6" style="width: 800px" placeholder="Type your comment"></textarea>
+	<br>
+ 	   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>	
