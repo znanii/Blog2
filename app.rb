@@ -11,6 +11,9 @@ class Post < ActiveRecord::Base
 	validates :author, presence: true
 end
 
+class Comment < ActiveRecord::Base
+	validates :content, presence: true
+end	
 get '/' do
 	erb "It's a blog"			
 end

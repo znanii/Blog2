@@ -3,3 +3,4 @@ blog.db
 blog.db-shm
 blog.db-wal
 db/migrate/20240317220158_create_post.rb
+blog.db
