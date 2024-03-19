@@ -6,6 +6,5 @@ class CreatePost < ActiveRecord::Migration[7.1]
 
   	t.timestamps
   end
-  Post.create :content=>"Default post", :author =>"admin"
 end
 end
